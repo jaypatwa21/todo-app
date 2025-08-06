@@ -1,14 +1,14 @@
-# Todo App - Full Stack Application
+# To-Do App - Full Stack Application
 
-A complete Todo application with authentication, built with Flask (Python) backend and React (TypeScript) frontend.
+A complete To-Do application with authentication, built with Flask (Python) backend and React (TypeScript) frontend.
 
 ## Features
 
 - ✅ User authentication (Login/Register)
 - ✅ Google OAuth integration
 - ✅ JWT token-based authentication
-- ✅ Create, read, update, delete todos
-- ✅ Email notifications when todos are created
+- ✅ Create, read, update, delete to-dos
+- ✅ Email notifications when to-dos are created
 - ✅ PostgreSQL database
 - ✅ Responsive design
 - ✅ Ready for deployment on Render
@@ -175,7 +175,7 @@ DATABASE_URL=postgresql://username:password@host:port/database
 2. Test all functionality including:
    - User registration/login
    - Google OAuth login
-   - Todo CRUD operations
+   - To-Do CRUD operations
    - Email notifications
 
 ## API Endpoints
@@ -186,11 +186,11 @@ DATABASE_URL=postgresql://username:password@host:port/database
 - `POST /api/auth/google` - Google OAuth login
 - `GET /api/auth/me` - Get current user
 
-### Todos
-- `GET /api/todos` - Get all todos for user
-- `POST /api/todos` - Create new todo
-- `PUT /api/todos/:id` - Update todo
-- `DELETE /api/todos/:id` - Delete todo
+### To-Dos
+- `GET /api/todos` - Get all to-dos for user
+- `POST /api/todos` - Create new to-do
+- `PUT /api/todos/:id` - Update to-do
+- `DELETE /api/todos/:id` - Delete to-do
 
 ## Contributing
 

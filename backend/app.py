@@ -51,7 +51,7 @@ with app.app_context():
 
 @app.route('/api/health', methods=['GET'])
 def health_check():
-    return jsonify({'status': 'healthy', 'message': 'Todo API is running'})
+    return jsonify({'status': 'healthy', 'message': 'To-Do API is running'})
 
 # Authentication routes
 @app.route('/api/auth/register', methods=['POST'])

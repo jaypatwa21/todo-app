@@ -1,4 +1,4 @@
-# Todo App - Project Summary
+# To-Do App - Project Summary
 
 ## ✅ What's Been Created
 

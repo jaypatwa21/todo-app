@@ -79,7 +79,7 @@ const Dashboard: React.FC = () => {
           margin: '0 auto'
         }}>
           <div>
-            <h1 style={{ margin: 0, color: '#333' }}>Todo App</h1>
+            <h1 style={{ margin: 0, color: '#333' }}>To-Do App</h1>
             <p style={{ margin: '0.25rem 0 0 0', color: '#666', fontSize: '0.875rem' }}>
               Welcome back, {user?.name}!
             </p>
@@ -120,7 +120,7 @@ const Dashboard: React.FC = () => {
           padding: '2rem'
         }}>
           <h2 style={{ margin: '0 0 1.5rem 0', color: '#333', fontSize: '1.5rem' }}>
-            Add New Todo
+            Add New To-Do
           </h2>
           <AddTodo onAddTodo={handleAddTodo} />
         </div>
@@ -153,7 +153,7 @@ const Dashboard: React.FC = () => {
             marginBottom: '1.5rem'
           }}>
             <h2 style={{ margin: 0, color: '#333', fontSize: '1.5rem' }}>
-              Your Todos
+              Your To-Dos
             </h2>
             <button
               onClick={fetchTodos}
@@ -173,11 +173,11 @@ const Dashboard: React.FC = () => {
 
           {isLoading ? (
             <div style={{ textAlign: 'center', padding: '2rem', color: '#666' }}>
-              Loading todos...
+              Loading to-dos...
             </div>
           ) : todos.length === 0 ? (
             <div style={{ textAlign: 'center', padding: '2rem', color: '#666' }}>
-              No todos yet. Create your first todo above!
+              No to-dos yet. Create your first to-do above!
             </div>
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>

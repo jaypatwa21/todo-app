@@ -5,34 +5,34 @@ import os
 def send_todo_created_email(mail, user_email, user_name, todo_title):
     """Send email notification when a todo is created"""
     try:
-        subject = "New Todo Created!"
+        subject = f"New To-Do Created: {todo_title}"
         sender = os.getenv('MAIL_USERNAME')
         recipients = [user_email]
         
         body = f"""
         Hi {user_name},
         
-        You have successfully created a new todo item:
+        You have successfully created a new to-do item:
         
         Title: {todo_title}
         
         Don't forget to complete it!
         
         Best regards,
-        Todo App Team
+        To-Do App Team
         """
         
         html_body = f"""
         <html>
         <body>
-            <h2>New Todo Created!</h2>
+            <h2>New To-Do Created!</h2>
             <p>Hi <strong>{user_name}</strong>,</p>
-            <p>You have successfully created a new todo item:</p>
+        <p>You have successfully created a new to-do:</p>
             <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin: 10px 0;">
                 <strong>Title:</strong> {todo_title}
             </div>
             <p>Don't forget to complete it!</p>
-            <p>Best regards,<br>Todo App Team</p>
+            <p>Best regards,<br>To-Do App Team</p>
         </body>
         </html>
         """

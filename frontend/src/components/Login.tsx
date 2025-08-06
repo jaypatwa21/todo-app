@@ -142,7 +142,7 @@ const Login: React.FC = () => {
         boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
       }}>
         <h2 style={{ textAlign: 'center', marginBottom: '2rem', color: '#333' }}>
-          Sign In to Todo App
+          Sign In to To-Do App
         </h2>
         
         {error && (
