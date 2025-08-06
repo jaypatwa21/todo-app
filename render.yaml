@@ -41,7 +41,7 @@ services:
       - key: REACT_APP_API_URL
         value: https://todo-app-backend.onrender.com/api
       - key: REACT_APP_GOOGLE_CLIENT_ID
-        sync: false
+        value: 855568580330-ib4p03q5htkk8h6e3spfri766shnd7p1.apps.googleusercontent.com
 
 databases:
   - name: todo-app-db
