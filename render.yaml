@@ -31,15 +31,17 @@ services:
       - key: GOOGLE_CLIENT_SECRET
         sync: false
 
-  - type: web
+  - type: static
     name: todo-app-frontend
-    runtime: static
-    plan: free
-    buildCommand: cd frontend && npm install && npm run build
+    buildCommand: cd frontend && npm ci && npm run build
     staticPublishPath: frontend/build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
     envVars:
       - key: REACT_APP_API_URL
-        value: https://todo-app-backend.onrender.com/api
+        value: https://todo-app-backend-0y08.onrender.com/api
       - key: REACT_APP_GOOGLE_CLIENT_ID
         value: 855568580330-ib4p03q5htkk8h6e3spfri766shnd7p1.apps.googleusercontent.com
 
