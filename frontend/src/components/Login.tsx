@@ -36,9 +36,12 @@ const Login: React.FC = () => {
 
   useEffect(() => {
     // Debug: Check if environment variable is loaded
+    console.log('=== ENVIRONMENT VARIABLES DEBUG ===');
     console.log('Google Client ID:', process.env.REACT_APP_GOOGLE_CLIENT_ID);
     console.log('API URL:', process.env.REACT_APP_API_URL);
     console.log('Node ENV:', process.env.NODE_ENV);
+    console.log('All REACT_APP vars:', Object.keys(process.env).filter(key => key.startsWith('REACT_APP')));
+    console.log('===================================');
     
     // Load Google Sign-In script
     const script = document.createElement('script');
