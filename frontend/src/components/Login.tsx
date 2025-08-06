@@ -35,6 +35,11 @@ const Login: React.FC = () => {
   }, [isAuthenticated, navigate]);
 
   useEffect(() => {
+    // Debug: Check if environment variable is loaded
+    console.log('Google Client ID:', process.env.REACT_APP_GOOGLE_CLIENT_ID);
+    console.log('API URL:', process.env.REACT_APP_API_URL);
+    console.log('Node ENV:', process.env.NODE_ENV);
+    
     // Load Google Sign-In script
     const script = document.createElement('script');
     script.src = 'https://accounts.google.com/gsi/client';
@@ -44,8 +49,18 @@ const Login: React.FC = () => {
 
     script.onload = () => {
       if (window.google) {
+        const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+        
+        if (!clientId) {
+          console.error('Google Client ID is not defined in environment variables');
+          setError('Google Sign-In is not properly configured. Please check your environment variables.');
+          return;
+        }
+        
+        console.log('Initializing Google Sign-In with Client ID:', clientId);
+        
         window.google.accounts.id.initialize({
-          client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
+          client_id: clientId,
           callback: handleGoogleResponse,
         });
 
